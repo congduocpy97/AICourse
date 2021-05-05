@@ -27,9 +27,9 @@ public class DFS {
     
     public static void main(String[] args) {
     	MAX_JUG1 = 3;
-        MAX_JUG2 = 5;
-        MAX_JUG3 = 9;
-        GOAL = 7;
+        MAX_JUG2 = 4;
+        MAX_JUG3 = 0;
+        GOAL = 2;
         
         Vertex.setMaxJugsCapacity(MAX_JUG1, MAX_JUG2, MAX_JUG3);
 
@@ -68,6 +68,7 @@ public class DFS {
             
             for (Vertex newVertex : newVertices){                                                                
                 if(!currentVertex.getPath().contains(newVertex)){
+                	
                     newVertex.setPath(currentVertex.getPath());
                     
                     if (!visited.contains(newVertex))
